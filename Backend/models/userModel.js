@@ -1,6 +1,5 @@
 // To store the details of user in dataBase
 import mongoose from "mongoose";
-
 const userSchema= new mongoose.Schema({
     name: {type: String, required: true},
     email: {type: String, required: true, unique: true},
@@ -11,12 +10,8 @@ const userSchema= new mongoose.Schema({
    isAccountVerified:{type: Boolean, default:true},
    resetOtp:{type: String, default:''},
    resetOtpExpireAt:{type: Number, default:''},
-
-   
-
-
 });
-
-
  const userModel= mongoose.model('User', userSchema);
  export default userModel;
+
+ 
